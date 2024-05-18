@@ -1,0 +1,11 @@
+[console_scripts]
+datahub-actions = datahub_actions.entrypoints:main
+
+[datahub_actions.action.plugins]
+executor = datahub_actions.plugin.action.execution.executor_action:ExecutorAction
+metadata_change_sync = datahub_actions.plugin.action.metadata_change_sync.metadata_change_sync:MetadataChangeSyncAction
+slack = datahub_actions.plugin.action.slack.slack:SlackNotificationAction
+snowflake_tag_propagation = datahub_actions.plugin.action.snowflake.tag_propagator:SnowflakeTagPropagatorAction
+tag_propagation = datahub_actions.plugin.action.tag.tag_propagation_action:TagPropagationAction
+teams = datahub_actions.plugin.action.teams.teams:TeamsNotificationAction
+term_propagation = datahub_actions.plugin.action.term.term_propagation_action:TermPropagationAction

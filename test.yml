@@ -1,0 +1,18 @@
+source:
+  type: file
+  config:
+    path: "/home/cytech/Desktop/cnsa_proj"
+    platform: "file_system"
+    profiling:
+      enabled: true
+    extraction:
+      file_types:
+        - "*.csv"
+        - "*.xlsx"
+        
+
+sink:
+  type: datahub-rest
+  config:
+    server: "http://localhost:8080"
+
